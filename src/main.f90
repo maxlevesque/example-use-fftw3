@@ -10,7 +10,7 @@ program main
     complex(mykind), pointer, contiguous :: tableout(:,:,:)
     type(c_ptr) :: fftwplan
     real(mykind), target :: bigin(nxmax,nxmax,nxmax)
-    complex(mykind), target :: bigout(nxmax,nxmax,nxmax)
+    complex(mykind), target :: bigout(nxmax/2+1,nxmax,nxmax)
     integer :: i
     open(11,file='planingtime')
     open(10,file='ffttime')
